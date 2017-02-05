@@ -99,9 +99,6 @@
                         <li>
                             <a href="<?php echo yii\helpers\Url::to(['menu/index']);?>">菜单</a>
                         </li>
-                        <li>
-                            <a href="<?php echo yii\helpers\Url::to(['backup/index']);?>">备份</a>
-                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
