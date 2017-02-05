@@ -1,4 +1,4 @@
-<?php if (empty($menu)): ?>
+<?php if (empty($monthIncome)): ?>
 
 <div id="page-wrapper">
             <div class="container-fluid">
@@ -13,6 +13,7 @@
 </div>
 
 <?php else : ?>
+
 <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -80,4 +81,4 @@
         <!-- /#page-wrapper -->
 
     </div>
-<?php endif;?>
+<?php  endif; ?>
