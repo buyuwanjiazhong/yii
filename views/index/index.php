@@ -3,11 +3,29 @@
     use yii\helpers\Html;
 ?>
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header"><?php echo date("m月d日")?>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="<?php echo yii\helpers\Url::to(['index/outcome']);?>">填写支出</a></h1>
+<div id="page-wrapper">
+    <div class="row">
+    	<div class="col-lg-12">
+            <h1 class="page-header"><?php echo date("m月d日")?>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="<?php echo yii\helpers\Url::to(['index/outcome']);?>">填写支出</a></h1>
+        </div>
+<?php if($get_order_key == 0): ?>
+		<div class="col-lg-12">
+                	<h4>
+                		<?php foreach($orders as $key => $order):?>
+                		<?php if($get_order_key == $key) :?>
+                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" style="border:2px solid green;" value="<?php echo $key;?>" ><?php echo $order;?></a>
+                		<?php else:?>
+                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" value="<?php echo $key;?>" ><?php echo $order;?></a>
+
+                		<?php endif;?>
+                		 <?php endforeach;?>
+                		<a href="javascript:void(0)" id="create-order-id" create-id="0" value="0"><p class="btn btn-outline btn-success">添加订单</p></a>
+                		 <hr>
+                	</h4>
                 </div>
+<?php else : ?>
+        
+                
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-12">
                 	<h4>
@@ -21,7 +39,7 @@
                 		 <?php endforeach;?>
                 		<a href="javascript:void(0)" id="create-order-id" create-id="0" value="0"><p class="btn btn-outline btn-success">添加订单</p></a>
                 		 <hr>
-                	<h4>
+                	</h4>
                 </div>
                 <div id="body">
 	                <div id="body-left" class="col-lg-12" style="float:left;width:500px;">
@@ -59,10 +77,9 @@
 
 	                	</div>
 	            	</div>
-            </div>    
-            </div>
-            
-            <!-- /.row -->
+                </div>    
+            <?php endif;?>
+        </div>                <!-- /.row -->
     </div>
     <!-- /#wrapper -->
 
