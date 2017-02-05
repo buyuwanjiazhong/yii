@@ -1,3 +1,18 @@
+<?php if (empty($menu)): ?>
+
+<div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"><?php echo $month_id."月";?> 收入 / <a href="<?php echo yii\helpers\Url::to(['year/monthoutcome','month_id' => $month_id]);?>">支出</a></h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+</div>
+
+<?php else : ?>
 <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -65,3 +80,4 @@
         <!-- /#page-wrapper -->
 
     </div>
+<?php endif;?>
