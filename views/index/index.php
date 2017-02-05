@@ -11,14 +11,6 @@
 <?php if($get_order_key == 0): ?>
 		<div class="col-lg-12">
                 	<h4>
-                		<?php foreach($orders as $key => $order):?>
-                		<?php if($get_order_key == $key) :?>
-                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" style="border:2px solid green;" value="<?php echo $key;?>" ><?php echo $order;?></a>
-                		<?php else:?>
-                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" value="<?php echo $key;?>" ><?php echo $order;?></a>
-
-                		<?php endif;?>
-                		 <?php endforeach;?>
                 		<a href="javascript:void(0)" id="create-order-id" create-id="0" value="0"><p class="btn btn-outline btn-success">添加订单</p></a>
                 		 <hr>
                 	</h4>
@@ -31,9 +23,9 @@
                 	<h4>
                 		<?php foreach($orders as $key => $order):?>
                 		<?php if($get_order_key == $key) :?>
-                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" style="border:2px solid green;" value="<?php echo $key;?>" ><?php echo $order;?></a>
+                			<a href="<?php echo yii\helpers\Url::to(['index/index', 'order-id' => $key]);?>"  order-id="<?php echo "order-".$key;?>" style="border:2px solid green;" value="<?php echo $key;?>" ><?php echo $order;?></a>
                 		<?php else:?>
-                			<a href="/yii/xiaosu/web/index.php?r=index/index&order-id=<?php echo $key?>"  order-id="<?php echo "order-".$key;?>" value="<?php echo $key;?>" ><?php echo $order;?></a>
+                			<a href="<?php echo yii\helpers\Url::to(['index/index', 'order-id' => $key]);?>"  order-id="<?php echo "order-".$key;?>" value="<?php echo $key;?>" ><?php echo $order;?></a>
 
                 		<?php endif;?>
                 		 <?php endforeach;?>
