@@ -111,7 +111,12 @@ $("#pay-bill").click(function(){
 });
 
 $("#delete-order").click(function(){
+
 	var order_id = $(this).val();
+	if (order_id == 0) {
+		alert("请先添加订单");
+		return false;
+	}
 	var day_id = $(this).attr('day-id');
 	var statu = confirm("确认删除 "+order_id+" 号订单？");
         if(!statu){

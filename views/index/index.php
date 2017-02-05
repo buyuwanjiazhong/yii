@@ -19,7 +19,7 @@
 
                 		<?php endif;?>
                 		 <?php endforeach;?>
-                		<a href="javascript:void(0)" id="create-order-id" create-id="0" value="0"><p class="fa fa-plus-circle"></p></a>
+                		<a href="javascript:void(0)" id="create-order-id" create-id="0" value="0"><p class="btn btn-outline btn-success">添加订单</p></a>
                 		 <hr>
                 	<h4>
                 </div>
