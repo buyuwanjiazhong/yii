@@ -37,7 +37,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>小苏麻麻私房猪蹄</title>
+    <title>郭宇欣的简易订单系统</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../views/index/sb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand">小苏麻麻私房猪蹄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="navbar-brand">郭宇欣的简易订单系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php
                 	echo thisDay();
                 ?>
