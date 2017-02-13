@@ -37,7 +37,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>郭宇欣的-简易订单系统</title>
+    <title>郭宇欣-简易订单系统</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../views/index/sb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
